@@ -1,19 +1,19 @@
+@use "./colors.scss" as *;
+
 * {
   margin: 0;
-  //   font-family: pretendard;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
 html {
-  //   font-family: pretendard;
   overflow-x: hidden;
 }
 
 body {
-  //   font-family: pretendard;
-  //   color: $main;
+  color: $red;
   overflow-x: hidden;
+  background: $main;
 }
 
 h1 {
@@ -50,6 +50,11 @@ ul,
 ol {
   padding-left: 0;
   list-style: none;
+}
+
+//
+.inner {
+  padding: 0 20px;
 }
 
 //scroll
