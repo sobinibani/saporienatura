@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Freight";
+  src: local("FreightBigCmpProBold-Regular"),
+    url("./assets/fonts/FreightBigCmpProBold-Regular.otf") format("woff");
+}
+/* @font-face {
+  font-family: "broadway";
+  src: local("broadway"), url("./assets/fonts/broadway.ttf") format("woff");
+} */
+@font-face {
+  font-family: "proximaNova";
+  src: local("proximaNova"),
+    url("./assets/fonts/proximaNova.otf") format("woff");
+}
