@@ -9,6 +9,13 @@
 } */
 @font-face {
   font-family: "proximaNova";
-  src: local("proximaNova"),
-    url("./assets/fonts/proximaNova.otf") format("woff");
+  font-weight: 600;
+  src: local("proximaNovaBold"),
+    url("./assets/fonts/proximaNovaBold.otf") format("woff");
+}
+@font-face {
+  font-family: "proximaNova";
+  font-weight: 400;
+  src: local("proximaNovaRegular"),
+    url("./assets/fonts/proximaNovaRegular.otf") format("woff");
 }
