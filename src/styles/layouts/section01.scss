@@ -2,7 +2,7 @@
 
 .se-01 {
   //   background-color: blue;
-  padding: 260px 0;
+  padding-top: 260px;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -48,6 +48,7 @@
     white-space: nowrap;
     overflow: hidden;
     border-bottom: 1px solid $red;
+    padding: 5px 0;
     .exWrap {
       animation: rail 30s linear infinite;
       animation-play-state: paused;
@@ -154,5 +155,6 @@
     font-size: clamp(40px, 0.034 * calc(100 * var(--vw, 1vw)), 68px);
     letter-spacing: -3px;
     line-height: 50px;
+    font-weight: 600;
   }
 }
