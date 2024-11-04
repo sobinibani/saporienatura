@@ -1,0 +1,59 @@
+@use "../base/colors.scss" as *;
+
+.se-02 {
+  background-color: beige;
+  padding: 200px 0;
+  .textWrap {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .text1 {
+    font-family: proximaNova;
+    font-size: clamp(42px, 0.091 * calc(100 * var(--vw, 1vw)), 160px);
+    text-transform: uppercase;
+    line-height: 130px;
+    letter-spacing: -8px;
+    font-weight: 600;
+  }
+  .text2 {
+    font-family: proximaNova;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding-left: 50%;
+  }
+  .circle {
+    position: absolute;
+    bottom: -10%;
+    right: 15%;
+    translate: none;
+    rotate: none;
+    scale: none;
+    // transform: translate3d(0px, -74.8542%, 0px);
+    border: 1px solid $red;
+    background-color: $main;
+    width: 12.5rem;
+    border-radius: 50%;
+    padding: 5px;
+    text {
+      fill: $red;
+      textPath {
+        text-transform: uppercase;
+        font-size: 34px;
+        font-family: Freight;
+      }
+    }
+    animation: rotateIt 10s linear infinite;
+  }
+  @keyframes rotateIt {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+symbol {
+  background-color: red;
+  path {
+    background-color: red;
+  }
+}
