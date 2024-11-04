@@ -1,0 +1,79 @@
+@use "../base/colors.scss" as *;
+
+footer {
+  background-color: $red;
+  color: $main;
+  padding-top: 90px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  .text {
+    margin-bottom: 110px;
+    p:nth-child(1) {
+      font-family: Freight;
+      font-size: clamp(40px, 0.034 * calc(100 * var(--vw, 1vw)), 68px);
+    }
+    p:nth-child(2) {
+      font-size: clamp(70px, 0.05 * calc(100 * var(--vw, 1vw)), 100px);
+      font-weight: 600;
+      letter-spacing: -2px;
+    }
+  }
+  .linkWrap {
+    display: flex;
+    margin-bottom: 180px;
+    .link {
+      width: 25%;
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+      }
+      ul {
+        li {
+          cursor: pointer;
+          font-family: proximaNova;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .copy {
+    border: 1px solid $main;
+    position: relative;
+    p.copyTop {
+      border-bottom: 1px solid $main;
+      font-family: Freight;
+      font-size: 2rem;
+      padding: 15px 20px;
+    }
+    p.copyBottom {
+      padding: 10px 20px;
+    }
+    .circle {
+      position: absolute;
+      width: 10rem;
+      top: -150px;
+      right: 10%;
+      translate: none;
+      rotate: none;
+      scale: none;
+      // transform: translate3d(0px, -74.8542%, 0px);
+      border: 1px solid $main;
+      background-color: $red;
+      border-radius: 50%;
+      padding: 5px;
+      .textcircle {
+        display: block;
+      }
+      text {
+        fill: $main;
+        textPath {
+          text-transform: uppercase;
+          font-size: 34px;
+          font-family: Freight;
+        }
+      }
+      animation: rotateIt 10s linear infinite;
+    }
+  }
+}
