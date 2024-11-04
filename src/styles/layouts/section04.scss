@@ -1,0 +1,25 @@
+@use "../base/colors.scss" as *;
+
+.se-04 {
+  ul {
+    margin: 150px 0;
+    li {
+      overflow: hidden;
+      font-family: proximaNova;
+      font-weight: 600;
+      font-size: clamp(42px, 0.091 * calc(100 * var(--vw, 1vw)), 182px);
+      border-bottom: 1px solid $red;
+      letter-spacing: -8px;
+      line-height: 78.022%;
+      margin-top: 20px;
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+  }
+  .text {
+    font-family: Freight;
+    text-align: center;
+    font-size: clamp(72px, 0.091 * calc(100 * var(--vw, 1vw)), 182px);
+  }
+}
