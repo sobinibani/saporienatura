@@ -1,5 +1,3 @@
-@use "./colors.scss" as *;
-
 * {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -10,13 +8,18 @@
   font-size: 19px;
 }
 html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
   color: $red;
   overflow-x: hidden;
   background: $main;
+  position: fixed;
+  left: 0;
+  right: 0;
+  animation: main 0.1s linear forwards;
+  animation-delay: 1.5s;
 }
 
 h1 {
@@ -78,7 +81,17 @@ ol {
 
 /*드래그 텍스트*/
 
-// ::selection {
-//     background-color: $main;
-//     color: $dark;
-// }
+::selection {
+  background-color: $red;
+  color: $main;
+}
+
+//
+@keyframes main {
+  0% {
+    position: fixed;
+  }
+  100% {
+    position: static;
+  }
+}
