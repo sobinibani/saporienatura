@@ -1,0 +1,43 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100 * var(--vh, 1vh));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background-color: #ff3b00;
+  color: #f3efe7;
+  z-index: 1000;
+  cursor: wait;
+  overflow: hidden;
+  &.loaded {
+    display: none;
+  }
+  p {
+    font-size: clamp(40px, 0.034 * calc(100 * var(--vw, 1vw)), 68px);
+    font-family: Freight;
+    letter-spacing: -0.05rem;
+    animation: preloaderText 0.5s ease-in forwards;
+    animation-delay: 0.6s;
+  }
+  animation: preloader 0.6s ease-in forwards;
+  animation-delay: 1s;
+}
+
+@keyframes preloader {
+  100% {
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 105%);
+  }
+}
+
+@keyframes preloaderText {
+  100% {
+    opacity: 0;
+  }
+}
