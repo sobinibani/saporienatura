@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Freight";
+  src: local("FreightBigCmpProBold-Regular"),
+    url("./assets/fonts/FreightBigCmpProBold-Regular.otf") format("woff");
+}
+
+@font-face {
+  font-family: "proximaNova";
+  font-weight: 800;
+  src: local("proximaNovaExtraBold"),
+    url("./assets/fonts/proximaNovaExtraBold.otf") format("woff");
+}
+
+@font-face {
+  font-family: "proximaNova";
+  font-weight: 600;
+  src: local("proximaNovaBold"),
+    url("./assets/fonts/proximaNovaBold.otf") format("woff");
+}
+
+@font-face {
+  font-family: "proximaNova";
+  font-weight: 300;
+  src: local("proximaNovaRegular"),
+    url("./assets/fonts/proximaNovaRegular.otf") format("woff");
+}
