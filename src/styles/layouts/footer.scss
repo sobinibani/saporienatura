@@ -1,5 +1,3 @@
-@use "../base/colors.scss" as *;
-
 footer {
   background-color: $red;
   color: $main;
@@ -20,18 +18,27 @@ footer {
   }
   .linkWrap {
     display: flex;
-    margin-bottom: 180px;
+    flex-wrap: wrap;
     .link {
-      width: 25%;
-      p {
-        font-size: 1.25rem;
-        margin-bottom: 5px;
-      }
-      ul {
-        li {
-          cursor: pointer;
-          font-family: proximaNova;
-          font-weight: 400;
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    @include responsive(T) {
+      display: flex;
+      margin-bottom: 180px;
+      .link {
+        width: 25%;
+        p {
+          font-size: 1.25rem;
+          margin-bottom: 5px;
+        }
+        ul {
+          li {
+            cursor: pointer;
+            font-family: proximaNova;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -50,30 +57,37 @@ footer {
       padding: 10px 20px;
     }
     .circle {
-      position: absolute;
-      width: 10rem;
-      top: -150px;
-      right: 10%;
-      translate: none;
-      rotate: none;
-      scale: none;
-      // transform: translate3d(0px, -74.8542%, 0px);
-      border: 1px solid $main;
-      background-color: $red;
-      border-radius: 50%;
-      padding: 5px;
-      .textcircle {
+      display: none;
+    }
+
+    @include responsive(T) {
+      .circle {
         display: block;
-      }
-      text {
-        fill: $main;
-        textPath {
-          text-transform: uppercase;
-          font-size: 34px;
-          font-family: Freight;
+        position: absolute;
+        width: 10rem;
+        top: -150px;
+        right: 10%;
+        translate: none;
+        rotate: none;
+        scale: none;
+        // transform: translate3d(0px, -74.8542%, 0px);
+        border: 1px solid $main;
+        background-color: $red;
+        border-radius: 50%;
+        padding: 5px;
+        .textcircle {
+          display: block;
         }
+        text {
+          fill: $main;
+          textPath {
+            text-transform: uppercase;
+            font-size: 34px;
+            font-family: Freight;
+          }
+        }
+        animation: rotateIt 10s linear infinite;
       }
-      animation: rotateIt 10s linear infinite;
     }
   }
 }
