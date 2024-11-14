@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Section02 = () => {
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: ".se-02",
+      start: "top top",
+      pin: true,
+      pinSpacing: false,
+    });
+  }, []);
+
   return (
     <section className="se-02">
       <div className="inner">
