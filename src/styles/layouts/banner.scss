@@ -1,4 +1,84 @@
+header {
+  .inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 20px;
+    // background-color: yellow;
+    .btnWrap {
+      display: none;
+    }
+    h1 {
+      width: 165px;
+      transform: translate(0);
+      position: static;
+    }
+    .cartBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: $red;
+      border-radius: 100%;
+      border: 1px solid $red;
+    }
+  }
+
+  @include responsive(D) {
+    .inner {
+      .btnWrap {
+        gap: 10px;
+        display: flex;
+        button {
+          border-radius: 20px;
+          border: 1px solid $red;
+          color: $red;
+          padding: 0.1875rem 1rem;
+          font-size: 1.25rem;
+        }
+      }
+      h1 {
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translatex(-50%);
+        svg {
+          width: 233px;
+          height: 62px;
+          // border: 1px solid red;
+        }
+      }
+    }
+  }
+}
+
 .banner {
-  background-color: red;
+  background-image: url("./assets/images/banner-background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
+  position: relative;
+  .lines {
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+  }
+  .bannerText {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  @include responsive(D) {
+    background-image: url("./assets/images/banner-background.jpg");
+    .lines {
+      width: 50vw;
+      top: 53%;
+    }
+  }
 }
