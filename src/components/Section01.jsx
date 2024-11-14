@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import BreadCard from "./BreadCard";
 import breadImg1 from "../assets/images/bread01.jpg";
 import breadImg2 from "../assets/images/bread02.jpg";
@@ -8,6 +11,53 @@ import breadImg5 from "../assets/images/bread05.jpg";
 import breadImg6 from "../assets/images/bread06.jpg";
 
 const Section01 = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    // 반응형 설정을 위해 ScrollTrigger.matchMedia 사용
+    ScrollTrigger.matchMedia({
+      // 700px 이상일 때만 애니메이션 활성화
+      "(min-width: 700px)": function () {
+        gsap.utils.toArray(".column1").forEach((item) => {
+          gsap.to(item, {
+            yPercent: 10,
+            duration: 10,
+            scrollTrigger: {
+              trigger: item,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 10,
+              toggleActions: "play none reverse none",
+            },
+          });
+        });
+
+        gsap.utils.toArray(".column2, .column3").forEach((item) => {
+          gsap.to(item, {
+            yPercent: -5,
+            duration: 10,
+            scrollTrigger: {
+              trigger: item,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 10,
+              toggleActions: "play none reverse none",
+            },
+          });
+        });
+      },
+      // 700px 미만일 때는 애니메이션 비활성화
+      "(max-width: 699px)": function () {
+        // 빈 함수로 두면 애니메이션이 적용되지 않음
+      },
+    });
+
+    return () => {
+      // Clean up ScrollTrigger to avoid memory leaks
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <section className="se-01">
       <div className="inner">

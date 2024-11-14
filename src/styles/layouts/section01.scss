@@ -1,18 +1,26 @@
-@use "../base/colors.scss" as *;
-
 .se-01 {
-  //   background-color: blue;
-  padding-top: 260px;
+  padding-top: 20px;
   .inner {
-    display: flex;
-    justify-content: space-between;
+    display: block;
     .column {
-      width: 32.5%;
-      &.column2 {
-        margin-top: -40px;
-      }
-      &.column3 {
-        margin-top: -60px;
+      width: 100%;
+    }
+  }
+
+  @include responsive(T) {
+    //   background-color: blue;
+    padding-top: 260px;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      .column {
+        width: 32.5%;
+        &.column2 {
+          margin-top: -40px;
+        }
+        &.column3 {
+          margin-top: -60px;
+        }
       }
     }
   }
@@ -84,9 +92,13 @@
     position: relative;
     .imgWrap {
       overflow: hidden;
-      height: 700px;
       border-radius: 10px;
       position: relative;
+      &::before {
+        content: "";
+        display: block;
+        padding-bottom: 125%;
+      }
       img {
         width: 100%;
         position: absolute;
