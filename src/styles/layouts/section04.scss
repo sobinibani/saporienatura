@@ -1,25 +1,48 @@
-@use "../base/colors.scss" as *;
-
 .se-04 {
+  background-color: $main;
+  position: relative;
+  z-index: 10;
   ul {
-    margin: 150px 0;
+    padding: 150px 0;
     li {
-      overflow: hidden;
+      position: relative;
       font-family: proximaNova;
       font-weight: 600;
       font-size: clamp(42px, 0.091 * calc(100 * var(--vw, 1vw)), 182px);
       border-bottom: 1px solid $red;
-      letter-spacing: -8px;
+      letter-spacing: -0.04rem;
       line-height: 78.022%;
       margin-top: 20px;
+      .word {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 10;
+        border-radius: 100px;
+
+        width: 20vw;
+        height: 11.5vw;
+
+        text-align: center;
+        font-family: Freight;
+        letter-spacing: -0.5px;
+        position: absolute;
+        background-color: $main;
+        color: $red;
+        border: 1px solid $red;
+        @include responsive(T) {
+          width: 15vw;
+          height: 6vw;
+        }
+        @include responsive(D) {
+          font-size: 2rem;
+          padding: 30px 0;
+        }
+      }
       &:nth-child(even) {
         text-align: right;
       }
     }
-  }
-  .text {
-    font-family: Freight;
-    text-align: center;
-    font-size: clamp(72px, 0.091 * calc(100 * var(--vw, 1vw)), 182px);
   }
 }
