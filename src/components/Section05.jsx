@@ -47,7 +47,7 @@ const Section05 = () => {
           anticipatePin: 1,
           scrub: true,
           invalidateOnRefresh: true,
-          markers: true, //
+          // markers: true,
         },
       });
 
